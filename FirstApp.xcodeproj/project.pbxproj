@@ -8,24 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		A722E27522576C81004B6AA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722E27422576C81004B6AA1 /* AppDelegate.swift */; };
-		A722E27722576C81004B6AA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722E27622576C81004B6AA1 /* ViewController.swift */; };
-		A722E27A22576C81004B6AA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A722E27822576C81004B6AA1 /* Main.storyboard */; };
 		A722E27C22576C82004B6AA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A722E27B22576C82004B6AA1 /* Assets.xcassets */; };
 		A722E27F22576C82004B6AA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A722E27D22576C82004B6AA1 /* LaunchScreen.storyboard */; };
 		A722E2872257BE09004B6AA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722E2862257BE09004B6AA1 /* MainViewController.swift */; };
 		A722E2892257C2BF004B6AA1 /* ControlModesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722E2882257C2BF004B6AA1 /* ControlModesViewController.swift */; };
+		A722E28C2257CC20004B6AA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A722E28A2257CC1B004B6AA1 /* Main.storyboard */; };
+		A722E28E2257CD3E004B6AA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722E28D2257CD3B004B6AA1 /* ViewController.swift */; };
+		A722E2902258C58A004B6AA1 /* LightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722E28F2258C58A004B6AA1 /* LightViewController.swift */; };
+		A724AF012285EF7800013431 /* HomeModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A724AF002285EF7800013431 /* HomeModelProtocol.swift */; };
+		A724AF03228609E200013431 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A724AF02228609E200013431 /* User.swift */; };
+		A72B277322872E050058D069 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B277222872E050058D069 /* UsersViewController.swift */; };
+		A72B2777228822400058D069 /* TemperatureDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B2776228822400058D069 /* TemperatureDBViewController.swift */; };
+		A72B277B228825FE0058D069 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B277A228825FE0058D069 /* Temperature.swift */; };
+		A72B277D228827A00058D069 /* TemperatureModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B277C228827A00058D069 /* TemperatureModelProtocol.swift */; };
+		A72B278422885A6D0058D069 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A72B278622885A6D0058D069 /* Localizable.strings */; };
+		A72B27892289A16E0058D069 /* TemperatureUploadDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B27882289A16E0058D069 /* TemperatureUploadDBViewController.swift */; };
+		A72B278B228EDC220058D069 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B278A228EDC220058D069 /* TemperatureViewController.swift */; };
+		A7D52AC72290AF53006C5CCF /* LightModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D52AC62290AF53006C5CCF /* LightModelProtocol.swift */; };
+		A7D52AC92290B5D5006C5CCF /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D52AC82290B5D5006C5CCF /* Light.swift */; };
+		A7D52ACB229133D8006C5CCF /* LightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D52ACA229133D8006C5CCF /* LightCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A722E27122576C81004B6AA1 /* FirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A722E27422576C81004B6AA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A722E27622576C81004B6AA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A722E27922576C81004B6AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A722E27B22576C82004B6AA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A722E27E22576C82004B6AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A722E28022576C82004B6AA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A722E2862257BE09004B6AA1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A722E2882257C2BF004B6AA1 /* ControlModesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlModesViewController.swift; sourceTree = "<group>"; };
+		A722E28B2257CC1B004B6AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A722E28D2257CD3B004B6AA1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A722E28F2258C58A004B6AA1 /* LightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightViewController.swift; sourceTree = "<group>"; };
+		A724AF002285EF7800013431 /* HomeModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelProtocol.swift; sourceTree = "<group>"; };
+		A724AF02228609E200013431 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A72B277222872E050058D069 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		A72B2776228822400058D069 /* TemperatureDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureDBViewController.swift; sourceTree = "<group>"; };
+		A72B277A228825FE0058D069 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		A72B277C228827A00058D069 /* TemperatureModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureModelProtocol.swift; sourceTree = "<group>"; };
+		A72B278022885A080058D069 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Main.strings; sourceTree = "<group>"; };
+		A72B278122885A090058D069 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A72B278522885A6D0058D069 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A72B278722885AE80058D069 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A72B27882289A16E0058D069 /* TemperatureUploadDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUploadDBViewController.swift; sourceTree = "<group>"; };
+		A72B278A228EDC220058D069 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		A7D52AC62290AF53006C5CCF /* LightModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightModelProtocol.swift; sourceTree = "<group>"; };
+		A7D52AC82290B5D5006C5CCF /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		A7D52ACA229133D8006C5CCF /* LightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +71,7 @@
 		A722E26822576C81004B6AA1 = {
 			isa = PBXGroup;
 			children = (
+				A72B278622885A6D0058D069 /* Localizable.strings */,
 				A722E27322576C81004B6AA1 /* FirstApp */,
 				A722E27222576C81004B6AA1 /* Products */,
 			);
@@ -59,15 +89,51 @@
 			isa = PBXGroup;
 			children = (
 				A722E27422576C81004B6AA1 /* AppDelegate.swift */,
-				A722E27622576C81004B6AA1 /* ViewController.swift */,
-				A722E2862257BE09004B6AA1 /* MainViewController.swift */,
-				A722E27822576C81004B6AA1 /* Main.storyboard */,
+				A7841BF322872C340097E7E6 /* Models */,
+				A7841BF422872C480097E7E6 /* Views */,
+				A7841BF522872C510097E7E6 /* Controllers */,
 				A722E27B22576C82004B6AA1 /* Assets.xcassets */,
-				A722E27D22576C82004B6AA1 /* LaunchScreen.storyboard */,
 				A722E28022576C82004B6AA1 /* Info.plist */,
-				A722E2882257C2BF004B6AA1 /* ControlModesViewController.swift */,
 			);
 			path = FirstApp;
+			sourceTree = "<group>";
+		};
+		A7841BF322872C340097E7E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A724AF02228609E200013431 /* User.swift */,
+				A724AF002285EF7800013431 /* HomeModelProtocol.swift */,
+				A72B277A228825FE0058D069 /* Temperature.swift */,
+				A72B277C228827A00058D069 /* TemperatureModelProtocol.swift */,
+				A7D52AC62290AF53006C5CCF /* LightModelProtocol.swift */,
+				A7D52AC82290B5D5006C5CCF /* Light.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A7841BF422872C480097E7E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A722E28A2257CC1B004B6AA1 /* Main.storyboard */,
+				A722E27D22576C82004B6AA1 /* LaunchScreen.storyboard */,
+				A7D52ACA229133D8006C5CCF /* LightCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7841BF522872C510097E7E6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A722E28D2257CD3B004B6AA1 /* ViewController.swift */,
+				A722E2862257BE09004B6AA1 /* MainViewController.swift */,
+				A722E2882257C2BF004B6AA1 /* ControlModesViewController.swift */,
+				A722E28F2258C58A004B6AA1 /* LightViewController.swift */,
+				A72B277222872E050058D069 /* UsersViewController.swift */,
+				A72B2776228822400058D069 /* TemperatureDBViewController.swift */,
+				A72B27882289A16E0058D069 /* TemperatureUploadDBViewController.swift */,
+				A72B278A228EDC220058D069 /* TemperatureViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +178,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ro,
 			);
 			mainGroup = A722E26822576C81004B6AA1;
 			productRefGroup = A722E27222576C81004B6AA1 /* Products */;
@@ -128,9 +195,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A722E28C2257CC20004B6AA1 /* Main.storyboard in Resources */,
+				A72B278422885A6D0058D069 /* Localizable.strings in Resources */,
 				A722E27F22576C82004B6AA1 /* LaunchScreen.storyboard in Resources */,
 				A722E27C22576C82004B6AA1 /* Assets.xcassets in Resources */,
-				A722E27A22576C81004B6AA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,30 +209,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D52AC72290AF53006C5CCF /* LightModelProtocol.swift in Sources */,
+				A72B2777228822400058D069 /* TemperatureDBViewController.swift in Sources */,
+				A7D52ACB229133D8006C5CCF /* LightCell.swift in Sources */,
+				A724AF012285EF7800013431 /* HomeModelProtocol.swift in Sources */,
 				A722E2872257BE09004B6AA1 /* MainViewController.swift in Sources */,
-				A722E27722576C81004B6AA1 /* ViewController.swift in Sources */,
 				A722E2892257C2BF004B6AA1 /* ControlModesViewController.swift in Sources */,
+				A724AF03228609E200013431 /* User.swift in Sources */,
+				A7D52AC92290B5D5006C5CCF /* Light.swift in Sources */,
+				A722E28E2257CD3E004B6AA1 /* ViewController.swift in Sources */,
+				A72B277B228825FE0058D069 /* Temperature.swift in Sources */,
+				A72B278B228EDC220058D069 /* TemperatureViewController.swift in Sources */,
 				A722E27522576C81004B6AA1 /* AppDelegate.swift in Sources */,
+				A72B27892289A16E0058D069 /* TemperatureUploadDBViewController.swift in Sources */,
+				A72B277322872E050058D069 /* UsersViewController.swift in Sources */,
+				A722E2902258C58A004B6AA1 /* LightViewController.swift in Sources */,
+				A72B277D228827A00058D069 /* TemperatureModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A722E27822576C81004B6AA1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A722E27922576C81004B6AA1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A722E27D22576C82004B6AA1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A722E27E22576C82004B6AA1 /* Base */,
+				A72B278122885A090058D069 /* ro */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A722E28A2257CC1B004B6AA1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A722E28B2257CC1B004B6AA1 /* Base */,
+				A72B278022885A080058D069 /* ro */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A72B278622885A6D0058D069 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A72B278522885A6D0058D069 /* ro */,
+				A72B278722885AE80058D069 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -174,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -235,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -291,6 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5S6577MEM;
 				INFOPLIST_FILE = FirstApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,6 +402,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5S6577MEM;
 				INFOPLIST_FILE = FirstApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

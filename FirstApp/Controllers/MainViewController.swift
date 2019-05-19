@@ -8,9 +8,51 @@
 
 import UIKit
 
+enum MenuItem: Int {
+    case controlModes = 0, light, temperature, dateTime, temperatureDate, insertTemperature
+    
+    var title: String {
+        switch self {
+        case .controlModes:
+            return "Control modes"
+        case .light:
+            return "Light"
+        case .temperature:
+            return "Temperature"
+        case .dateTime:
+            return "Data"
+        case .temperatureDate:
+            return "Temperature data"
+        case .insertTemperature:
+            return "Insert Temperature"
+        }
+    }
+    
+    var segueID: String {
+        switch self {
+        case .controlModes:
+            return "controlSegue"
+        case .light:
+            return "lightControlSegue"
+        case .temperature:
+            return "temperatureSegue"
+        case .dateTime:
+            return "tabelaSegue"
+        case .temperatureDate:
+            return "tempSegue"
+        case .insertTemperature:
+            return "addSegue"
+        }
+    }
+    
+}
+
+
+
+
 class MainViewController: UIViewController {
     
-    let optiuni = ["Control modes", "Light", "Temperature"]
+    let optiuni: [MenuItem] = [.controlModes, .light, .temperature, .dateTime, .temperatureDate, .insertTemperature]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,8 +60,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-       
-        
+    
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -29,7 +70,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-         title = "iHome"
+         title = NSLocalizedString("iHome", comment: "screen title")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -47,12 +88,11 @@ class MainViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    
 }
 
 extension MainViewController: UITableViewDataSource {
     public func numberOfSections(in tableView: UITableView) -> Int {
-            return 2
+            return 1
     }
     
     
@@ -63,8 +103,8 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        
-        cell.textLabel?.text = "\(indexPath.section):\(indexPath.row) \(optiuni[indexPath.row])"
+        let menuItem: MenuItem = optiuni[indexPath.row]
+        cell.textLabel?.text = menuItem.title
         
         cell.imageView?.image = UIImage(named: "shutterstock_home_automation_pikaczy")
         
@@ -74,21 +114,20 @@ extension MainViewController: UITableViewDataSource {
 
 extension MainViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            performSegue(withIdentifier: "controlSegue", sender: nil)
-        }
+        let menuItem = MenuItem(rawValue: indexPath.row)
+        performSegue(withIdentifier:(menuItem?.segueID)! , sender: nil)
     }
     
-    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    /*public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 32.0
     }
     
-    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 32))
         view.backgroundColor = UIColor.init(white: 0.3, alpha: 0.9)
         
         return view
-    }
+    }*/
 
 
 }
