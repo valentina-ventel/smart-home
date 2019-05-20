@@ -11,7 +11,6 @@ import UIKit
 class TemperatureDBViewController: UIViewController, TemperatureModelProtocol {
     
     var feedItems: NSArray = NSArray()
-    var selectedTemperature: Temperature = Temperature()
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var temp: UILabel!
@@ -38,17 +37,4 @@ class TemperatureDBViewController: UIViewController, TemperatureModelProtocol {
         //temp.text = item.temperature
         
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

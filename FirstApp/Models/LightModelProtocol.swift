@@ -25,7 +25,7 @@ class LightModel: NSObject, URLSessionDataDelegate {
             if error != nil {
                 print ("Failed to downloaded data")
             } else {
-                print ("Data downloaded successfully")
+                print ("Data downloaded successfully, ieiiiiii")
                 self.parseJSON(data!)
             }
         }
@@ -48,9 +48,9 @@ class LightModel: NSObject, URLSessionDataDelegate {
             jsonElement = jsonResult[i] as! NSDictionary
             let light = Light()
             
-            if let hall = jsonElement["hall"] as? Int,
-                let living = jsonElement["living_room"] as? Int,
-                let kitchen = jsonElement["kitchen"] as? Int {
+            if let str_hall = jsonElement["hall"] as? String, let hall = Int(str_hall),
+                let str_living = jsonElement["living_room"] as? String, let living = Int(str_living),
+                let str_kitchen = jsonElement["kitchen"] as? String, let kitchen = Int(str_kitchen) {
                 light.hall = hall
                 light.living = living
                 light.kitchen = kitchen

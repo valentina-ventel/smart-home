@@ -34,9 +34,20 @@ enum Room: Int {
     }
 }
 
-class LightViewController: UIViewController {
+class LightViewController: UIViewController, LightModelProtocol {
+    
+    var firstLight: Light = Light()
+    var feedItems: NSArray = NSArray()
     let options = ["Hol", "Camera de zi", "Bucătarie"]
     @IBOutlet weak var lightTableView: UITableView!
+    
+    
+    func itemsDownloaded(items: NSArray) {
+        feedItems = items
+        firstLight = feedItems.firstObject as! Light
+        lightTableView.reloadData()
+        print (" Heiiii \(firstLight.kitchen!)")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +56,11 @@ class LightViewController: UIViewController {
         // Do any additional setup after loading the view.
         title = "Lights"
         lightTableView.tableFooterView = UIView(frame: .zero)
+        
+        let lightModel = LightModel()
+        lightModel.delegate = self
+        lightModel.downloadedItems()
+        
     }
     
     @objc func switchControl(_ sender: UISwitch) {
@@ -174,6 +190,25 @@ extension LightViewController: UITableViewDataSource {
                                    action: #selector(switchControl(_:)),
                                    for: .valueChanged)
         
+        switch cell.lightSwitch.tag {
+        case Room.hall.rawValue:
+            do {
+                cell.lightSwitch.isOn = (firstLight.hall ?? 0) == 0 ? false : true
+                    // ((firstLight.hall!) == 0 ? true:false)
+            }
+        case Room.living.rawValue:
+            do {
+                cell.lightSwitch.isOn = (firstLight.living ?? 0) == 0 ? false : true
+                // ((firstLight.living!) == 0 ? true:false)
+            }
+        case Room.kitchen.rawValue:
+            do {
+                cell.lightSwitch.isOn = (firstLight.kitchen ?? 0) == 0 ? false : true
+                    // ((firstLight.kitchen!) == 0 ? true:false)
+            }
+        default:
+            print("Oops! Mai incearca o data!")
+        }
         return cell
     }
 }
