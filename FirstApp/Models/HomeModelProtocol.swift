@@ -14,7 +14,7 @@ protocol HomeModelProtocol: class {
 
 class HomeModel: NSObject, URLSessionDataDelegate {
     weak var delegate: HomeModelProtocol!
-    let urlPath = "http://localhost/conectToDataBase.php"
+    let urlPath = "http://localhost/selectUsers.php"
     
     func downloadItems() {
         let url: URL = URL(string: urlPath)!
@@ -48,7 +48,7 @@ class HomeModel: NSObject, URLSessionDataDelegate {
             
             if let nume = jsonElement["nume"] as? String,
                 let prenume = jsonElement["prenume"] as? String,
-                let id = jsonElement["cnp"] as? String,
+                let id = jsonElement["id"] as? String,
                 let puk = jsonElement["puk"] as? String {
                 
                 user.nume = nume

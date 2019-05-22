@@ -9,7 +9,7 @@
 import UIKit
 
 enum MenuItem: Int {
-    case controlModes = 0, light, temperature, dateTime, temperatureDate, insertTemperature
+    case controlModes = 0, light, temperature
     
     var title: String {
         switch self {
@@ -19,12 +19,6 @@ enum MenuItem: Int {
             return "Light"
         case .temperature:
             return "Temperature"
-        case .dateTime:
-            return "Data"
-        case .temperatureDate:
-            return "Temperature data"
-        case .insertTemperature:
-            return "Insert Temperature"
         }
     }
     
@@ -36,23 +30,14 @@ enum MenuItem: Int {
             return "lightControlSegue"
         case .temperature:
             return "temperatureSegue"
-        case .dateTime:
-            return "tabelaSegue"
-        case .temperatureDate:
-            return "tempSegue"
-        case .insertTemperature:
-            return "addSegue"
         }
     }
     
 }
 
-
-
-
 class MainViewController: UIViewController {
     
-    let optiuni: [MenuItem] = [.controlModes, .light, .temperature, .dateTime, .temperatureDate, .insertTemperature]
+    let optiuni: [MenuItem] = [.controlModes, .light, .temperature]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -65,6 +50,7 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         
         tableView.tableFooterView = UIView(frame: .zero)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -104,9 +90,22 @@ extension MainViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         let menuItem: MenuItem = optiuni[indexPath.row]
+        print(indexPath.row)
         cell.textLabel?.text = menuItem.title
         
-        cell.imageView?.image = UIImage(named: "shutterstock_home_automation_pikaczy")
+        switch indexPath.row {
+        case MenuItem.controlModes.rawValue: do {
+            cell.imageView?.image = UIImage(named: "bluetooth-icon")
+        }
+        case MenuItem.light.rawValue: do {
+            cell.imageView?.image = UIImage(named: "KrMzNwi")
+            }
+        case MenuItem.temperature.rawValue: do {
+            cell.imageView?.image = UIImage(named: "kisspng-emoji-temperature-celsius-kelvin-fahrenheit-temperature-5acc9f626537b1.1590588015233595864146")
+            }
+        default:
+            print("Error!")
+        }
         
         return cell
     }

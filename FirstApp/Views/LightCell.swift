@@ -9,6 +9,7 @@
 import UIKit
 
 class LightCell: UITableViewCell {
+    
     @IBOutlet weak var lightSwitch: UISwitch!
     
 }

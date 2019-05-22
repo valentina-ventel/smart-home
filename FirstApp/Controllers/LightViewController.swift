@@ -39,6 +39,7 @@ class LightViewController: UIViewController, LightModelProtocol {
     var firstLight: Light = Light()
     var feedItems: NSArray = NSArray()
     let options = ["Hol", "Camera de zi", "Bucătarie"]
+   
     @IBOutlet weak var lightTableView: UITableView!
     
     
@@ -186,6 +187,7 @@ extension LightViewController: UITableViewDataSource {
         cell.textLabel?.text = "\(options[indexPath.row])"
         cell.lightSwitch.tag = indexPath.row
         
+    
         cell.lightSwitch.addTarget(self,
                                    action: #selector(switchControl(_:)),
                                    for: .valueChanged)

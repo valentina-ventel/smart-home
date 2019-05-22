@@ -19,7 +19,7 @@ class TemperatureViewController: UIViewController, TemperatureModelProtocol {
     
     
     @IBAction func uploadData(_ sender: Any) {
-        let url = NSURL(string: "http://172.20.10.11/conectDB.php") // locahost MAMP - change to point to your database server
+        let url = NSURL(string: "http://localhost/conectDB.php") // locahost MAMP - change to point to your database server
 
         var request = URLRequest(url: url! as URL)
         request.httpMethod = "POST"
@@ -29,7 +29,7 @@ class TemperatureViewController: UIViewController, TemperatureModelProtocol {
         // the POST string has entries separated by &
 
         dataString = dataString + "&temperatureTextField=\(temperatureTextField.text!)" // add items as name and value
-        dataString = dataString + "&dateTextField=\(dateTextField.description)"
+        dataString = dataString + "&dateTextField=\(dateTextField.text!)"
 
         // convert the post string to utf8 format
 
