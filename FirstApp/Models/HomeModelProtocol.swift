@@ -18,7 +18,7 @@ class HomeModel: NSObject, URLSessionDataDelegate {
     
     func downloadItems() {
         let url: URL = URL(string: urlPath)!
-        let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
+        let defaultSession = URLSession(configuration: .default)
         let task = defaultSession.dataTask(with: url) { (data, response, error) in
             if error != nil {
                 print("Failed to download data")
