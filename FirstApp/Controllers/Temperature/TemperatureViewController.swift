@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//"localhost","root","","smart_home_db"
 
 
 class TemperatureViewController: UIViewController, TemperatureModelProtocol {
@@ -19,7 +19,7 @@ class TemperatureViewController: UIViewController, TemperatureModelProtocol {
     
     
     @IBAction func uploadData(_ sender: Any) {
-        let url = NSURL(string: "http://localhost/conectDB.php") // locahost MAMP - change to point to your database server
+        let url = NSURL(string: "http://10.100.0.244/conectDB.php") // locahost MAMP - change to point to your database server
 
         var request = URLRequest(url: url! as URL)
         request.httpMethod = "POST"
@@ -29,8 +29,8 @@ class TemperatureViewController: UIViewController, TemperatureModelProtocol {
         // the POST string has entries separated by &
 
         dataString = dataString + "&temperatureTextField=\(temperatureTextField.text!)" // add items as name and value
-        dataString = dataString + "&dateTextField=\(dateTextField.text!)"
-
+       dataString = dataString + "&dateTextField=\(dateTextField.text!)"
+        
         // convert the post string to utf8 format
 
         let dataD = dataString.data(using: .utf8) // convert to utf8 string
@@ -104,7 +104,7 @@ class TemperatureViewController: UIViewController, TemperatureModelProtocol {
         }
         let lastTemperature: Temperature = feedItems.lastObject as! Temperature
         
-        displayTempCell.textLabel!.text = "\(lastTemperature.temperature ?? "0") ℃"
+        displayTempCell.textLabel!.text = "\(lastTemperature.temperature ?? 0.0) ℃"
         displayTempCell.detailTextLabel?.text = "\(lastTemperature.description)"
     }
     

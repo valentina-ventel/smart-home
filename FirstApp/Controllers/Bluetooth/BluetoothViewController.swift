@@ -75,8 +75,10 @@ class BluetoothViewController: UIViewController, CBCentralManagerDelegate, CBPer
     }
     
     @IBAction func sendButtonPressed(_ sender: AnyObject) {
-        let helloWorld = "Hello World!"
-        let dataToSend = helloWorld.data(using: String.Encoding.utf8)
+        let deviceID = UIDevice.current.identifierForVendor!.uuidString
+        print ("Hei, am descoperit codul tau \(deviceID)!")
+        //let helloWorld = "Hello World!"
+        let dataToSend = deviceID.data(using: String.Encoding.utf8)
         
         if let mainPeripheral = mainPeripheral,
             let mainCharacteristic = mainCharacteristic {

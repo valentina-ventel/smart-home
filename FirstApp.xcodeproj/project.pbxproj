@@ -16,7 +16,7 @@
 		A722E28C2257CC20004B6AA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A722E28A2257CC1B004B6AA1 /* Main.storyboard */; };
 		A722E28E2257CD3E004B6AA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722E28D2257CD3B004B6AA1 /* LoginViewController.swift */; };
 		A722E2902258C58A004B6AA1 /* LightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722E28F2258C58A004B6AA1 /* LightViewController.swift */; };
-		A724AF012285EF7800013431 /* HomeModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A724AF002285EF7800013431 /* HomeModelProtocol.swift */; };
+		A724AF012285EF7800013431 /* UserModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A724AF002285EF7800013431 /* UserModelProtocol.swift */; };
 		A724AF03228609E200013431 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A724AF02228609E200013431 /* User.swift */; };
 		A72B277322872E050058D069 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B277222872E050058D069 /* UsersViewController.swift */; };
 		A72B277B228825FE0058D069 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72B277A228825FE0058D069 /* Temperature.swift */; };
@@ -42,7 +42,7 @@
 		A722E28B2257CC1B004B6AA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A722E28D2257CD3B004B6AA1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A722E28F2258C58A004B6AA1 /* LightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightViewController.swift; sourceTree = "<group>"; };
-		A724AF002285EF7800013431 /* HomeModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModelProtocol.swift; sourceTree = "<group>"; };
+		A724AF002285EF7800013431 /* UserModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelProtocol.swift; sourceTree = "<group>"; };
 		A724AF02228609E200013431 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A72B277222872E050058D069 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		A72B277A228825FE0058D069 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 			children = (
 				A7D52AD322985085006C5CCF /* Networking */,
 				A724AF02228609E200013431 /* User.swift */,
-				A724AF002285EF7800013431 /* HomeModelProtocol.swift */,
+				A724AF002285EF7800013431 /* UserModelProtocol.swift */,
 				A72B277A228825FE0058D069 /* Temperature.swift */,
 				A72B277C228827A00058D069 /* TemperatureModelProtocol.swift */,
 				A7D52AC62290AF53006C5CCF /* LightModelProtocol.swift */,
@@ -255,7 +255,7 @@
 			files = (
 				A7D52AC72290AF53006C5CCF /* LightModelProtocol.swift in Sources */,
 				A7D52ACB229133D8006C5CCF /* LightCell.swift in Sources */,
-				A724AF012285EF7800013431 /* HomeModelProtocol.swift in Sources */,
+				A724AF012285EF7800013431 /* UserModelProtocol.swift in Sources */,
 				A722E2872257BE09004B6AA1 /* MainViewController.swift in Sources */,
 				A715AAA2229C8A8400462771 /* ScanTableViewController.swift in Sources */,
 				A724AF03228609E200013431 /* User.swift in Sources */,

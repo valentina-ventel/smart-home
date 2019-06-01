@@ -10,7 +10,7 @@ import Foundation
 
 class HTTPClient: NSObject {
     class func login(user: String, puk: String, completionHandler: @escaping (_ result: NSArray, _ error: Error?)->()) {
-        let urlPath = "http://localhost/selectUsers.php"
+        let urlPath = "http://10.100.0.244/selectUsers.php"
         
         let url: URL = URL(string: urlPath)!
         let defaultSession = URLSession(configuration: .default)

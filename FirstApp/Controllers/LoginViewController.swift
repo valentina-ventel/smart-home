@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 
-class LoginViewController: UIViewController, HomeModelProtocol {
+class LoginViewController: UIViewController, UserModelProtocol {
     
     @IBOutlet weak var pukText: UITextField!
     @IBOutlet weak var userText: UITextField!
@@ -46,15 +46,15 @@ class LoginViewController: UIViewController, HomeModelProtocol {
                 return
         }
         // MARK: Test
-        if user.lowercased() == "test" {
-             self.performSegue(withIdentifier: "mainSegue", sender: nil)
-        }
+//        if user.lowercased() == "test" {
+//             self.performSegue(withIdentifier: "mainSegue", sender: nil)
+//        }
         
         HTTPClient.login(user: user,
                          puk: puk) { (result, err) in
                             if err == nil {
                                 for dict in result as! [[String: Any]] {
-                                    let nume = dict["nume"] as! String
+                                    let nume = dict["UserID"] as! String
                                     if nume == user {
                                         DispatchQueue.main.async {
                                             self.performSegue(withIdentifier: "mainSegue", sender: nil)
@@ -95,7 +95,7 @@ class LoginViewController: UIViewController, HomeModelProtocol {
         
         while index < feedItems.count {
             let user: User = feedItems[index] as! User
-            if (user.nume == userText.text) && (user.puk == pukText.text) {
+            if (user.userID == userText.text) && (user.puk == pukText.text) {
                 return user
             }
             index += 1

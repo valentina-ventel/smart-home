@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol HomeModelProtocol: class {
+protocol UserModelProtocol: class {
     func itemsDownloaded(items: NSArray)
 }
 
 class HomeModel: NSObject, URLSessionDataDelegate {
-    weak var delegate: HomeModelProtocol!
-    let urlPath = "http://localhost/selectUsers.php"
+    weak var delegate: UserModelProtocol!
+    let urlPath = "http://10.100.0.244/selectUsers.php"
     
     func downloadItems() {
         let url: URL = URL(string: urlPath)!
@@ -46,14 +46,14 @@ class HomeModel: NSObject, URLSessionDataDelegate {
             jsonElement = jsonResult[i] as! NSDictionary
             let user = User()
             
-            if let nume = jsonElement["nume"] as? String,
-                let prenume = jsonElement["prenume"] as? String,
-                let id = jsonElement["id"] as? String,
-                let puk = jsonElement["puk"] as? String {
+            if let userID = jsonElement["UserID"] as? String,
+                let password = jsonElement["Password"] as? String,
+                let name = jsonElement["Name"] as? String,
+                let puk = jsonElement["Imei"] as? String {
                 
-                user.nume = nume
-                user.prenume = prenume
-                user.id = id
+                user.userID = userID
+                user.password = password
+                user.name = name
                 user.puk = puk
             }
             users.add(user)

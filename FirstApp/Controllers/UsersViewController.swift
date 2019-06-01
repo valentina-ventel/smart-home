@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UsersViewController: UIViewController, HomeModelProtocol {
+class UsersViewController: UIViewController, UserModelProtocol {
 
     var feedItems: NSArray = NSArray()
     var selectedUser: User = User()
@@ -28,6 +28,11 @@ class UsersViewController: UIViewController, HomeModelProtocol {
         homeModel.delegate = self
         homeModel.downloadItems()
         // Do any additional setup after loading the view.
+        
+//        UIDevice.current.identifierForVendor!.uuidString
+//        UIDevice.current.identifierForVendor
+//        UIDevice.current.identifierForVendor!.uuidString
+        
     }
     
     

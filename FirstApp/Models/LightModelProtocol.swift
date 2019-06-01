@@ -15,7 +15,7 @@ protocol LightModelProtocol: class {
 
 class LightModel: NSObject, URLSessionDataDelegate {
     weak var delegate: LightModelProtocol!
-    let urlPath = "http://localhost/lightControls.php"
+    let urlPath = "http://10.100.0.244/lightControls.php"
     
     func downloadedItems() {
         let url: URL = URL(string: urlPath)!

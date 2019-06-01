@@ -15,7 +15,7 @@ protocol TemperatureModelProtocol: class {
 
 class TemperatureModel: NSObject, URLSessionDataDelegate {
     weak var delegate: TemperatureModelProtocol!
-    let urlPath = "http://localhost/script0.php"
+    let urlPath = "http://10.100.0.244/script0.php"
     
     func downloadedItems() {
         let url: URL = URL(string: urlPath)!
@@ -49,18 +49,19 @@ class TemperatureModel: NSObject, URLSessionDataDelegate {
             
             
             
-            if let temperature = jsonElement["temperature"] as? String,
-                let stringDate = jsonElement["date"] as? String,
-                let puk = jsonElement["ora"] as? String {
+            if let id = jsonElement["ID"] as? String , let ID = Int(id),
+                let temperature = jsonElement["CurrentTemp"] as? String, let curentTemp = Float(temperature),
+                let stringDate = jsonElement["DateTime"] as? String
+                {
                 
                 let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd"
+                    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                 dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
                 let date = dateFormatter.date(from:stringDate)!
                 
-                temp.temperature = temperature
+                temp.id = ID
                 temp.data = date
-                temp.puk = puk
+                temp.temperature = curentTemp
             }
             temperatureArray.add(temp)
         }

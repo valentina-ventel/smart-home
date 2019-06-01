@@ -9,19 +9,21 @@
 import UIKit
 
 class Temperature: NSObject {
-    var temperature: String?
-    var data: Date?
-    var puk: String?
+   var temperature: Float?
+   var data: Date?
+//    var puk: String?
+    var id: Int?
+    
     
     override init() {}
     
-    init(temperature: String, data: Date, puk: String) {
+    init(temperature: Float, data: Date, id: Int) {
         self.temperature = temperature
         self.data = data
-        self.puk = puk
+        self.id = id
     }
     
     override var description: String {
-        return "\(data!), \(puk!)"
+        return "\(data!), \(id!)"
     }
 }

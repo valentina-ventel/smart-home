@@ -11,29 +11,29 @@ import Foundation
 
 class User: NSObject {
 
-    var nume: String?
-    var prenume: String?
-    var id: String?
+    var userID: String?
+    var password: String?
+    var name: String?
     var puk: String?
     
     var fullName: String {
-        return "\(prenume!) \(nume!)"
+        return "\(userID!) \(name!)"
     }
     
     override init() {
     }
     
-    init(nume: String, prenume: String, id: String, puk: String) {
-        self.nume = nume
-        self.prenume = prenume
-        self.id = id
+    init(userID: String, password: String, name: String, puk: String) {
+        self.userID = userID
+        self.password = password
+        self.name = name
         self.puk = puk
     }
     
     
     
     override var description: String {
-        return "\(id!), \(puk!)"
+        return "\(userID!), \(puk!)"
     }
 
 }

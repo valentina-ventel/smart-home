@@ -70,7 +70,7 @@ class LightViewController: UIViewController, LightModelProtocol {
         var dataString = "secretWord=44fdcv8jf3"
         let room = Room(rawValue: sender.tag)?.toString()
         dataString += "&\(room!)=\(sender.isOn ? 1:0)"
-        url = NSURL(string: "http://localhost/\(Room(rawValue: sender.tag)!.url())")
+        url = NSURL(string: "http://10.100.0.244/\(Room(rawValue: sender.tag)!.url())")
         
         /*
         switch sender.tag {
